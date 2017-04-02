@@ -1,0 +1,190 @@
+$content-bg-color: #fafafa;
+$header-bg-color: #282828;
+$header-gradient-dark: #282828;
+$header-gradient-light: #282828;
+$anchor-color: #FFF;
+$border-color: #d4d4d4;
+
+@mixin inner-content {
+    display: inline-block;
+    vertical-align: top;
+    line-height: 1;
+    width: 50%;
+}
+
+@mixin font-size-19em {
+    font-size: 1.9em;
+}
+
+.product-widget-container {
+    background-color: $content-bg-color;
+
+    .header {
+        font-size: 1.2em;
+        height: 65px;
+        background-color: $header-bg-color;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        display: table;
+        width: 100%;
+        font-weight: bold;
+        cursor: pointer;
+        background: -webkit-linear-gradient(right, $header-gradient-dark, $header-gradient-light); /* For Safari 5.1 to 6.0 */
+        background: -o-linear-gradient(right, $header-gradient-dark, $header-gradient-light); /* For Opera 11.1 to 12.0 */
+        background: -moz-linear-gradient(right, $header-gradient-dark, $header-gradient-light); /* For Firefox 3.6 to 15 */
+        background: linear-gradient(right, $header-gradient-dark, $header-gradient-light); /* Standard syntax */
+    }
+    
+    .header  a {
+        text-decoration: none;
+        font-size: 0.8em;
+    }
+
+    .header > div {
+        display: table-cell;
+        vertical-align: middle;
+        padding: 0px 20px;
+        color: #FFF;
+    }
+
+    .header-icon {
+        width: 10px;
+        @include font-size-19em;
+        padding-right: 0px !important;
+    }
+
+    .content {
+        margin: 20px;
+    }
+
+    .inner-content {    
+        float: left;
+        width: 100%;
+    }
+
+    .content-text {
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 20px;
+        line-height: 1.3em;
+    }
+
+    .navigation {
+        display: table;
+        width: 100%;  
+        border-top: 1px solid $border-color;
+        background-color: $header-bg-color; 
+    }
+
+    .navigation > .inner-content {
+        height: 50px;
+        line-height: 50px;
+    }
+
+    .nav-arrows {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .nav-link {
+        text-align: center;    
+        color: $anchor-color;
+    }
+
+    .content-opened {
+  max-height: 800px;
+  transition: height 200ms ease 0ms;
+    }
+
+    .content-closed {
+        max-height: 0;
+	overflow: hidden;
+
+	/* Set our transitions up. */
+	-webkit-transition: max-height 0.8s;
+	-moz-transition: max-height 0.8s;
+	transition: max-height 0.8s;
+    }
+
+    .anchor-align {
+        vertical-align: top;
+        line-height: 5px;
+    }
+
+    /* Custom, iPhone Retina */ 
+    @media only screen and (min-width : 320px) {
+        
+    }
+
+    /* Extra Small Devices, Phones */ 
+    @media only screen and (min-width : 480px) {
+
+    }
+
+    /* Small Devices, Tablets */
+    @media only screen and (min-width : 768px) {
+        .inner-content {
+            @include inner-content;
+        }
+
+        .nav-link {
+            text-align: unset;
+        }
+
+        .nav-link-right {
+            text-align: right;
+        }
+
+    }
+
+    /* Medium Devices, Desktops */
+    @media only screen and (min-width : 992px) {
+        .inner-content {
+            @include inner-content;
+        }
+
+        .inner-content-30 {   
+            float: left;
+            width: 30% !important;
+        }
+
+        .inner-content-70 {   
+            float: left;
+            width: 70% !important;
+        }
+
+        .nav-link {
+            text-align: unset;
+        }
+        
+        .nav-link-right {
+            text-align: right;
+        }
+
+    }
+
+    /* Large Devices, Wide Screens */
+    @media only screen and (min-width : 1200px) {
+        .inner-content {
+            @include inner-content;
+        }        
+
+        .inner-content-30 {   
+            float: left;
+            width: 30% !important;
+        }
+
+        .inner-content-70 {   
+            float: left;
+            width: 70% !important;
+        }
+
+        .nav-link {
+            text-align: unset;
+        }
+        
+        .nav-link-right {
+            text-align: right;
+        }
+    }
+}

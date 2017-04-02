@@ -1,0 +1,31 @@
+$anchor-color: #FFF;
+
+body {
+    font-size: .875em;
+    font-family: ProximaNova-Regular,Arial,Helvetica,sans-serif;
+    line-height: 170%;
+}
+
+a {
+    color: $anchor-color;
+    font-size: 1.2em;
+    font-weight: bold;
+        text-decoration: none;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.text-align-right {
+    text-align: right;
+}
+
+.padding-right-10 {
+    padding-right: 10px;
+}
+
+.padding-left-10 {
+    padding-left: 10px;
+}
